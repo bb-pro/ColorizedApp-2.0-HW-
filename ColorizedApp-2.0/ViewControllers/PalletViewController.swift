@@ -9,9 +9,6 @@ import UIKit
 
 final class PalletViewController: UIViewController {
     
-    var color: Color!
-    
-    
     @IBOutlet weak var colorView: UIView!
     
     @IBOutlet weak var redTF: UITextField!
@@ -21,6 +18,8 @@ final class PalletViewController: UIViewController {
     @IBOutlet weak var redSlider: UISlider!
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
+    
+    var color: Color!
     
     unowned var delegate: PalletViewControllerDelegate!
     
@@ -60,7 +59,6 @@ final class PalletViewController: UIViewController {
         view.endEditing(true)
     }
     
-    
     @IBAction func goBack() {
         delegate.setNewColor(for: color)
         dismiss(animated: true)
@@ -70,8 +68,6 @@ final class PalletViewController: UIViewController {
 
 //MARK: - UITextFieldDelegate
 extension PalletViewController: UITextFieldDelegate {
-    
-   
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let newValue = textField.text else { return }
