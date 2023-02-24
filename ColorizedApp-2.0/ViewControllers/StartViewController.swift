@@ -37,15 +37,10 @@ final class StartViewController: UIViewController {
        }
 }
 
-
 extension StartViewController: PalletViewControllerDelegate {
     func setNewColor(for color: Color) {
         self.color = color
         updateUI()
     }
-    
-    
-    
-    
 }
 
