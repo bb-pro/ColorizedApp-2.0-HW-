@@ -15,8 +15,6 @@ final class StartViewController: UIViewController {
     
     var color = Color(red: 1, green: 1, blue: 1)
     
- 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     
