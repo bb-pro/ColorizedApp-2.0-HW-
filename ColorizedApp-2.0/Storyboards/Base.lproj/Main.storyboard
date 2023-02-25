@@ -72,25 +72,51 @@
                                             <constraint firstAttribute="width" constant="51" id="sdS-S5-wOL"/>
                                         </constraints>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="grQ-I2-pCD">
+                                        <rect key="frame" x="64" y="0.0" width="40" height="182"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQe-Nk-Jyc">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGx-ta-BYh">
+                                                <rect key="frame" x="0.0" y="69" width="40" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtn-9m-0dX">
+                                                <rect key="frame" x="0.0" y="138" width="40" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="Bmh-9f-QES"/>
+                                        </constraints>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="JWk-6X-qcv">
-                                        <rect key="frame" x="64" y="0.0" width="158" height="182"/>
+                                        <rect key="frame" x="117" y="0.0" width="130" height="182"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bjE-x2-Ccf">
-                                                <rect key="frame" x="-2" y="0.0" width="162" height="52.5"/>
+                                                <rect key="frame" x="-2" y="0.0" width="134" height="52.5"/>
                                                 <color key="tintColor" systemColor="systemRedColor"/>
                                                 <connections>
                                                     <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="IX7-RU-AJE"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nM8-M9-2dl">
-                                                <rect key="frame" x="-2" y="65.5" width="162" height="52"/>
+                                                <rect key="frame" x="-2" y="65.5" width="134" height="52"/>
                                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                                 <connections>
                                                     <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="ECH-n4-EKV"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="aIT-J3-2d1">
-                                                <rect key="frame" x="-2" y="130.5" width="162" height="52.5"/>
+                                                <rect key="frame" x="-2" y="130.5" width="134" height="52.5"/>
                                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                                 <connections>
                                                     <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="wN0-PH-HEr"/>
@@ -99,14 +125,14 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="vpI-jE-kjW">
-                                        <rect key="frame" x="235" y="0.0" width="65" height="182"/>
+                                        <rect key="frame" x="260" y="0.0" width="40" height="182"/>
                                         <subviews>
                                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbe-oO-86H">
-                                                <rect key="frame" x="0.0" y="0.0" width="65" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="44"/>
                                                 <items>
                                                     <barButtonItem style="plain" id="UlW-of-p3U">
-                                                        <textField key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" id="ZCl-57-Pu4">
-                                                            <rect key="frame" x="16" y="6.5" width="33" height="31"/>
+                                                        <textField key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" id="ZCl-57-Pu4">
+                                                            <rect key="frame" x="16" y="6.5" width="8" height="31"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -118,11 +144,11 @@
                                                 </items>
                                             </toolbar>
                                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KUl-69-tOP">
-                                                <rect key="frame" x="0.0" y="69" width="65" height="44"/>
+                                                <rect key="frame" x="0.0" y="69" width="40" height="44"/>
                                                 <items>
                                                     <barButtonItem style="plain" id="3X7-x2-FXg">
-                                                        <textField key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" id="4cN-x4-Nkf">
-                                                            <rect key="frame" x="16" y="6.5" width="33" height="31"/>
+                                                        <textField key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" id="4cN-x4-Nkf">
+                                                            <rect key="frame" x="16" y="6.5" width="8" height="31"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -131,11 +157,11 @@
                                                 </items>
                                             </toolbar>
                                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XaJ-zk-4lm">
-                                                <rect key="frame" x="0.0" y="138" width="65" height="44"/>
+                                                <rect key="frame" x="0.0" y="138" width="40" height="44"/>
                                                 <items>
                                                     <barButtonItem style="plain" id="sQg-un-jGF">
-                                                        <textField key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" id="Wve-LZ-RCS">
-                                                            <rect key="frame" x="16" y="6.5" width="33" height="31"/>
+                                                        <textField key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" id="Wve-LZ-RCS">
+                                                            <rect key="frame" x="16" y="6.5" width="8" height="31"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -145,7 +171,7 @@
                                             </toolbar>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="65" id="TvR-NS-8E6"/>
+                                            <constraint firstAttribute="width" constant="40" id="TvR-NS-8E6"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>

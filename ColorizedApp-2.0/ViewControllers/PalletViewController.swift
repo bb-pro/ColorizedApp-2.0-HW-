@@ -79,7 +79,7 @@ extension PalletViewController: UITextFieldDelegate {
 
 //MARK: - Private Methods
 private extension PalletViewController {
-
+    
     
     func updatTextFieldValues(_ newValue: String, _ textField: UITextField) {
         if let colorValue = Float(newValue) {
@@ -94,18 +94,15 @@ private extension PalletViewController {
                 color.green = greenSlider.value
                 greenTF.text = string(from: greenSlider)
                 
-            case blueTF:
+            default:
                 blueSlider.setValue(colorValue, animated: true)
                 color.blue = blueSlider.value
                 blueTF.text = string(from: blueSlider)
-            
-            default:
-                print(" error ")
+                
+                setColor()
+                
             }
-            setColor()
-            
-        }
-        else {
+        } else {
             showAlert()
             textField.text = ""
         }
