@@ -15,6 +15,10 @@ final class PalletViewController: UIViewController {
     @IBOutlet weak var greenTF: UITextField!
     @IBOutlet weak var blueTF: UITextField!
     
+    @IBOutlet var redLabel: UILabel!
+    @IBOutlet var greenLabel: UILabel!
+    @IBOutlet var blueLabel: UILabel!
+    
     @IBOutlet weak var redSlider: UISlider!
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
@@ -46,12 +50,15 @@ final class PalletViewController: UIViewController {
         case redSlider:
             redTF.text = string(from: sender)
             color.red = sender.value
+            setValue(for: redLabel)
         case greenSlider:
             greenTF.text = string(from: sender)
             color.green = sender.value
+            setValue(for: greenLabel)
         default:
             blueTF.text = string(from: sender)
             color.blue = sender.value
+            setValue(for: blueLabel)
         }
     }
     
@@ -80,7 +87,6 @@ extension PalletViewController: UITextFieldDelegate {
 //MARK: - Private Methods
 private extension PalletViewController {
     
-    
     func updatTextFieldValues(_ newValue: String, _ textField: UITextField) {
         if let colorValue = Float(newValue) {
             switch textField {
@@ -93,7 +99,7 @@ private extension PalletViewController {
                 greenSlider.setValue(colorValue, animated: true)
                 color.green = greenSlider.value
                 greenTF.text = string(from: greenSlider)
-                
+               
             default:
                 blueSlider.setValue(colorValue, animated: true)
                 color.blue = blueSlider.value
@@ -131,15 +137,32 @@ private extension PalletViewController {
             case redTF:
                 addDoneButton(for: redTF)
                 redTF.text = string(from: redSlider)
+                redLabel.text = redTF.text
             case greenTF:
                 addDoneButton(for: greenTF)
                 greenTF.text = string(from: greenSlider)
+                greenLabel.text = greenTF.text
             default:
                 addDoneButton(for: blueTF)
                 blueTF.text = string(from: blueSlider)
+                blueLabel.text = blueTF.text
             }
         }
     }
+    
+    func setValue(for labels: UILabel...) {
+        labels.forEach { label in
+            switch label {
+            case redLabel:
+                redLabel.text = string(from: redSlider)
+            case greenLabel:
+                greenLabel.text = string(from: greenSlider)
+            default:
+                blueLabel.text = string(from: blueSlider)
+            }
+        }
+    }
+    
     func showStartPallet() {
         redSlider.setValue(color.red, animated: false)
         greenSlider.setValue(color.green, animated: false)
