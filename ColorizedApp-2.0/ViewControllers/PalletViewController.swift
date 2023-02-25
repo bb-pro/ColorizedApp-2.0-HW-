@@ -23,7 +23,7 @@ final class PalletViewController: UIViewController {
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
     
-    var color: Color!
+    var color: UIColor!
     
     unowned var delegate: PalletViewControllerDelegate!
     
@@ -35,7 +35,11 @@ final class PalletViewController: UIViewController {
         blueTF.delegate = self
         
         colorView.layer.cornerRadius = 15
+        colorView.backgroundColor = color
+        
         showStartPallet()
+        setValue(for: redLabel, greenLabel, blueLabel)
+        
     }
     
     // Метод для скрытия клавиатуры тапом по экрану
@@ -49,15 +53,12 @@ final class PalletViewController: UIViewController {
         switch sender {
         case redSlider:
             redTF.text = string(from: sender)
-            color.red = sender.value
             setValue(for: redLabel)
         case greenSlider:
             greenTF.text = string(from: sender)
-            color.green = sender.value
             setValue(for: greenLabel)
         default:
             blueTF.text = string(from: sender)
-            color.blue = sender.value
             setValue(for: blueLabel)
         }
     }
@@ -92,17 +93,17 @@ private extension PalletViewController {
             switch textField {
             case redTF:
                 redSlider.setValue(colorValue, animated: true)
-                color.red = redSlider.value
+                
                 redTF.text = string(from: redSlider)
                 
             case greenTF:
                 greenSlider.setValue(colorValue, animated: true)
-                color.green = greenSlider.value
+                
                 greenTF.text = string(from: greenSlider)
                
             default:
                 blueSlider.setValue(colorValue, animated: true)
-                color.blue = blueSlider.value
+              
                 blueTF.text = string(from: blueSlider)
                 
                 setColor()
@@ -164,11 +165,12 @@ private extension PalletViewController {
     }
     
     func showStartPallet() {
-        redSlider.setValue(color.red, animated: false)
-        greenSlider.setValue(color.green, animated: false)
-        blueSlider.setValue(color.blue, animated: false)
-        setColor()
-        setValue(for: redTF, greenTF, blueTF)
+        let ciColor = CIColor(color: color)
+        
+        redSlider.value = Float(ciColor.red)
+        greenSlider.value = Float(ciColor.green)
+        blueSlider.value = Float(ciColor.blue)
+
     }
     
     func string(from slider: UISlider) -> String {
