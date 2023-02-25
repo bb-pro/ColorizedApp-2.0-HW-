@@ -8,17 +8,16 @@
 import UIKit
 
 protocol PalletViewControllerDelegate: AnyObject {
-    func setNewColor(for color: Color)
+    func setNewColor(for color: UIColor)
 }
 
 final class StartViewController: UIViewController {
     
-    var color = Color(red: 1, green: 1, blue: 1)
+    var color: UIColor!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        updateUI()
+        view.backgroundColor = .white
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -26,21 +25,11 @@ final class StartViewController: UIViewController {
         palletVC.color = color
         palletVC.delegate = self
     }
-    
-    func updateUI() {
-           view.backgroundColor = UIColor(
-               red: CGFloat(color.red),
-               green: CGFloat(color.green),
-               blue: CGFloat(color.blue),
-               alpha: 1
-           )
-       }
 }
 
 extension StartViewController: PalletViewControllerDelegate {
-    func setNewColor(for color: Color) {
-        self.color = color
-        updateUI()
+    func setNewColor(for color: UIColor) {
+        view.backgroundColor = color
     }
 }
 
