@@ -130,6 +130,7 @@ private extension PalletViewController {
             blue: CGFloat(blueSlider.value),
             alpha: 1
         )
+        color = colorView.backgroundColor
     }
     
     func setValue(for textFields: UITextField...) {
@@ -166,11 +167,11 @@ private extension PalletViewController {
     
     func showStartPallet() {
         let ciColor = CIColor(color: color)
-        
         redSlider.value = Float(ciColor.red)
         greenSlider.value = Float(ciColor.green)
         blueSlider.value = Float(ciColor.blue)
-
+        
+        setValue(for: redTF, greenTF, blueTF)
     }
     
     func string(from slider: UISlider) -> String {
