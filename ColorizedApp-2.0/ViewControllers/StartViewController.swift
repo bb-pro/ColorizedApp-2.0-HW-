@@ -12,17 +12,15 @@ protocol PalletViewControllerDelegate: AnyObject {
 }
 
 final class StartViewController: UIViewController {
-    
-    var color: UIColor!
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let palletVC = segue.destination as? PalletViewController else { return }
-        palletVC.color = color
+        palletVC.color = view.backgroundColor
         palletVC.delegate = self
     }
 }
