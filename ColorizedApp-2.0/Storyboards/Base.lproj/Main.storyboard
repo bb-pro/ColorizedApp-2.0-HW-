@@ -99,24 +99,24 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="JWk-6X-qcv">
-                                        <rect key="frame" x="117" y="0.0" width="120" height="182"/>
+                                        <rect key="frame" x="117" y="0.0" width="110" height="182"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bjE-x2-Ccf">
-                                                <rect key="frame" x="-2" y="0.0" width="124" height="52.5"/>
+                                                <rect key="frame" x="-2" y="0.0" width="114" height="52.5"/>
                                                 <color key="tintColor" systemColor="systemRedColor"/>
                                                 <connections>
                                                     <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="IX7-RU-AJE"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nM8-M9-2dl">
-                                                <rect key="frame" x="-2" y="65.5" width="124" height="52"/>
+                                                <rect key="frame" x="-2" y="65.5" width="114" height="52"/>
                                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                                 <connections>
                                                     <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="ECH-n4-EKV"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="aIT-J3-2d1">
-                                                <rect key="frame" x="-2" y="130.5" width="124" height="52.5"/>
+                                                <rect key="frame" x="-2" y="130.5" width="114" height="52.5"/>
                                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                                 <connections>
                                                     <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="wN0-PH-HEr"/>
@@ -125,14 +125,14 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="vpI-jE-kjW">
-                                        <rect key="frame" x="250" y="0.0" width="50" height="182"/>
+                                        <rect key="frame" x="240" y="0.0" width="60" height="182"/>
                                         <subviews>
                                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbe-oO-86H">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="44"/>
                                                 <items>
-                                                    <barButtonItem style="plain" id="UlW-of-p3U">
+                                                    <barButtonItem image="cloud.fill" catalog="system" style="plain" id="UlW-of-p3U">
                                                         <textField key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" id="ZCl-57-Pu4">
-                                                            <rect key="frame" x="16" y="6.5" width="18" height="31"/>
+                                                            <rect key="frame" x="16" y="6.5" width="28" height="31"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -144,11 +144,11 @@
                                                 </items>
                                             </toolbar>
                                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KUl-69-tOP">
-                                                <rect key="frame" x="0.0" y="69" width="50" height="44"/>
+                                                <rect key="frame" x="0.0" y="69" width="60" height="44"/>
                                                 <items>
                                                     <barButtonItem style="plain" id="3X7-x2-FXg">
                                                         <textField key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" id="4cN-x4-Nkf">
-                                                            <rect key="frame" x="16" y="6.5" width="18" height="31"/>
+                                                            <rect key="frame" x="16" y="6.5" width="28" height="31"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -157,13 +157,13 @@
                                                 </items>
                                             </toolbar>
                                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XaJ-zk-4lm">
-                                                <rect key="frame" x="0.0" y="138" width="50" height="44"/>
+                                                <rect key="frame" x="0.0" y="138" width="60" height="44"/>
                                                 <items>
                                                     <barButtonItem style="plain" id="sQg-un-jGF">
                                                         <textField key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" id="Wve-LZ-RCS">
-                                                            <rect key="frame" x="16" y="6.5" width="18" height="31"/>
+                                                            <rect key="frame" x="16" y="6.5" width="28" height="31"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                         </textField>
                                                     </barButtonItem>
@@ -171,7 +171,7 @@
                                             </toolbar>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="TvR-NS-8E6"/>
+                                            <constraint firstAttribute="width" constant="60" id="TvR-NS-8E6"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -239,6 +239,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cloud.fill" catalog="system" width="128" height="87"/>
         <image name="square.and.pencil" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
