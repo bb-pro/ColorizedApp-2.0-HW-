@@ -37,9 +37,9 @@ final class PalletViewController: UIViewController {
         colorView.layer.cornerRadius = 15
         colorView.backgroundColor = color
         
-        showStartPallet()
+        setValue(for: redSlider, greenSlider, blueSlider)
         setValue(for: redLabel, greenLabel, blueLabel)
-        
+        setValue(for: redTF, greenTF, blueTF)
     }
     
     // Метод для скрытия клавиатуры тапом по экрану
@@ -62,16 +62,13 @@ final class PalletViewController: UIViewController {
             setValue(for: blueLabel)
         }
     }
-    
     @IBAction func doneButtonTapped(_ sender: Any) {
         view.endEditing(true)
     }
-    
     @IBAction func goBack() {
         delegate.setNewColor(for: color)
         dismiss(animated: true)
     }
-    
 }
 
 //MARK: - UITextFieldDelegate
@@ -93,17 +90,12 @@ private extension PalletViewController {
             switch textField {
             case redTF:
                 redSlider.setValue(colorValue, animated: true)
-                
                 redTF.text = string(from: redSlider)
-                
             case greenTF:
                 greenSlider.setValue(colorValue, animated: true)
-                
                 greenTF.text = string(from: greenSlider)
-               
             default:
                 blueSlider.setValue(colorValue, animated: true)
-              
                 blueTF.text = string(from: blueSlider)
                 
                 setColor()
@@ -165,13 +157,15 @@ private extension PalletViewController {
         }
     }
     
-    func showStartPallet() {
+    func setValue(for sliders: UISlider...) {
         let ciColor = CIColor(color: color)
-        redSlider.value = Float(ciColor.red)
-        greenSlider.value = Float(ciColor.green)
-        blueSlider.value = Float(ciColor.blue)
-        
-        setValue(for: redTF, greenTF, blueTF)
+        sliders.forEach { slider in
+            switch slider {
+            case redSlider: redSlider.value = Float(ciColor.red)
+            case greenSlider: greenSlider.value = Float(ciColor.green)
+            default: blueSlider.value = Float(ciColor.blue)
+            }
+        }
     }
     
     func string(from slider: UISlider) -> String {
